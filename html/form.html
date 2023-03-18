@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sign up to drive</title>
+  </head>
+  <body>
+    <main>
+      <form>
+        <fieldset>
+          <h2>become a driver</h2>
+
+          <p><a href="#"></a>sign up to ride</p>
+        </fieldset>
+        <fieldset>
+          <input type="radio" name="car" id="have" />
+          <label for="have">i have a car</label>
+
+          <input type="radio" name="car" id="need" />
+          <label for="need">i need a car</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>personal information</legend>
+          <ul>
+            <li>
+              <label for="first">First name</label>
+              <input
+                type="text"
+                name="Fname"
+                id="first"
+                placeholder="your name"
+                required
+              />
+            </li>
+            <li>
+              <label for="sname">surname</label>
+              <input
+                type="text"
+                name="surname"
+                id="sname"
+                placeholder="your surname"
+                required
+              />
+            </li>
+            <li>
+              <label for="mail">Email</label>
+              <input
+                type="email"
+                name="Email"
+                id="mail"
+                placeholder="yourmail@email.com"
+                required
+              />
+            </li>
+            <li>
+              <label for="pw">password</label>
+              <input type="password" name="password" id="pw" />
+            </li>
+            <li>
+              <label for="num">Phone number</label>
+              <input
+                type="number"
+                name="Phone number"
+                id="num"
+                maxlength="11"
+              />
+            </li>
+            <li>
+              <label for="city">city you will drive in</label>
+
+              <select>
+                <optgroup label="east">
+                  <option value="on">onitsha</option>
+                  <option value="ab">aba</option>
+                  <option value="ow">owerri</option>
+                  <option value="en">enugu</option>
+                </optgroup>
+                <optgroup label="west">
+                  <option value="lg">lagos</option>
+                  <option value="os">osun</option>
+                  <option value="ab">abeokuta</option>
+                  <option value="on">ondo</option>
+                </optgroup>
+                <optgroup label="north">
+                  <option value="ka">katsina</option>
+                  <option value="kn">kano</option>
+                  <option value="ka">kaduna</option>
+                  <option value="so">sokoto</option>
+                </optgroup>
+              </select>
+            </li>
+
+            <li>
+              <label for="code">invitation code(optional)</label>
+              <input type="text" name="code" id="code" min="7" max="7" />
+            </li>
+
+            <li>
+              <input type="radio" name="checkbox" id="agree1" />
+              <label for="agree1">i accept to be part of drive </label>
+            </li>
+
+            <li>
+              <input type="radio" name="checkbox" id="agree2" />
+              <label for="agree2">i agree to all product services</label>
+            </li>
+
+            <li>
+              <label for="photo">place your passport</label>
+              <input
+                type="file"
+                name=""
+                id="photo"
+                accept=".jpg,.png"
+                multiple
+              />
+            </li>
+
+            <li>
+              <input type="submit" value="create account" />
+            </li>
+          </ul>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>

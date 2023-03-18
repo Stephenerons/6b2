@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Tables</h1>
+    <main>
+      <table border="4">
+        <caption>
+          Food schedule
+        </caption>
+
+        <thead>
+          <tr>
+            <th>Days</th>
+            <th>morning</th>
+            <th>afternoon</th>
+            <th>evening</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>morning</th>
+            <td>fufu and ogbono</td>
+            <td>garri and groundnut</td>
+            <td>garri and groundnut</td>
+          </tr>
+          <tr>
+            <th>tuesday</th>
+            <td>friedrice</td>
+            <td rowspan="3">bread and egg</td>
+            <td>eba and vegetablesoup</td>
+          </tr>
+          <tr>
+            <th>wednesday</th>
+            <td>yam and egg</td>
+            <!-- <td>bread_and_egg</td> -->
+            <td>fufu and egusi</td>
+          </tr>
+          <tr>
+            <th>thursday</th>
+            <td>garri and groundnut</td>
+            <!-- <td>bread_and_egg</td> -->
+            <td>moimoi and bread</td>
+          </tr>
+          <tr>
+            <th>friday</th>
+            <td>eba and egusisoup</td>
+            <td>beans</td>
+            <td>pizza</td>
+          </tr>
+          <tr>
+            <th>saturday</th>
+            <td>stewrice</td>
+            <td>eba and egusisoup</td>
+            <td>beans</td>
+          </tr>
+          <tr>
+            <th>sunday</th>
+            <td colspan="3">tea and bread</td>
+            <!-- <td>tea_and_bread</td> -->
+            <!-- <td>tea_and_bread</td> -->
+          </tr>
+          <footer>
+            <td colspan="4">food changes by season</td>
+          </footer>
+        </tbody>
+      </table>
+    </main>
+  </body>
+</html>
