@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign up form</title>
+    <style>
+      fieldset {
+        width: 16em;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -12,11 +17,14 @@
         <fieldset>
           <h2>Personal</h2>
 
-          <label for="nm">Name</label> <br />
+          <div>
+            <label for="nm">Name</label> <br />
 
-          <input type="text" name="Name" id="nm" /> <br />
+            <input type="text" name="Name" placeholder="John Doe" id="nm" />
+          </div>
+          <br />
 
-          <label>date of birth</label> <br />
+          <div><label>Date of birth</label></div>
           <select>
             <optgroup>
               <option value="">month</option>
@@ -106,10 +114,12 @@
               <option value="2023">2023</option>
             </optgroup>
           </select>
-
-          <p>what is your favourite animal?</p>
+          <br />
+          <br />
 
           <div>
+            <label>what is your favourite animal?</label> <br />
+
             <input style="width: 3em" type="text" placeholder="lion" />
 
             <input style="width: 3em" type="text" placeholder="Tiger" />
@@ -129,6 +139,7 @@
               id="mail"
             />
           </section>
+          <br />
 
           <div>
             <label for="pw">Password</label><br />
@@ -140,6 +151,7 @@
               id="pw"
             />
           </div>
+          <br />
 
           <div>
             <label for="verify">Verify Password</label><br />
@@ -156,13 +168,25 @@
 
           <div>
             <label for="add">Address</label> <br />
-            <input type="text" name="Address" id="add" />
+            <input
+              type="text"
+              name="Address"
+              placeholder=" no 3, kuvuki land"
+              id="add"
+            />
           </div>
+          <br />
 
           <div>
             <label for="city">City</label> <br />
-            <input type="text" name="City" id="city" />
+            <input
+              type="text"
+              name="City"
+              placeholder="kuvuki city"
+              id="city"
+            />
           </div>
+          <br />
 
           <label>State</label> <br />
           <select>
@@ -176,10 +200,18 @@
               <option value="Bau">Bauchi</option>
             </optgroup>
           </select>
+          <br />
+          <br />
 
           <div>
             <label for="phonenum">Phone</label> <br />
-            <input type="tel" maxlength="15" name="Phone" id="phonenum" />
+            <input
+              type="tel"
+              maxlength="15"
+              name="Phone"
+              placeholder="+234 07041708240"
+              id="phonenum"
+            />
           </div>
         </fieldset>
       </form>
