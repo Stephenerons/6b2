@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav ul{
+    background-color: gold;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    align-items: center;
+    font-size: large;
+    height: 100px;
+    padding: 10px;
+}
+.first{
+    align-self: flex-start;
+}
+.seven{
+    align-self: flex-end;
+}
+.second{
+    align-self: flex-start;
+}
+.six{
+    align-self: flex-end;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 100px, 100px, 100px, 100px, 100px, 100px;
+    grid-template-areas: "a a a c"
+                         "a a a c"
+                         "b b b c"
+                         "b b b c"
+                         "b b b c"
+                         "d d d d"
+                         ;
+
+    gap: 10px;
+
+}
+.secta{
+    grid-area: a;
+}
+
+.green{
+    grid-area: c;
+}
+footer{
+    grid-area: d;
+}
+
+ .forarticle{
+    grid-area: b;
+ }
+/* main > :nth-child(5){
+    grid-area: b;
+} */
+
+
+main > *{
+    background-color: gold;
+}
+
+aside:first-of-type{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 100px);
+}
+
+.forarticle{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+
+footer{
+    background-color: blue;
+    height: 100px;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="first">Home</li>
+                <li class="second">About</li>
+                <li class="third">Project</li>
+                <li class="fourth">Classwork</li>
+                <li class="fifth">Assignment</li>
+                <li class="six">Sign Up</li>
+                <li class="seven">Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="secta"></section>
+        <div class="forarticle">
+            <section>
+                <article class="side1">Sect Article A</article>
+                <article class="side2">Sect Article B</article>
+                <article class="side3">Sect Article C</article>
+                <article class="side4">Sect Article D</article>
+                <article class="side5">Sect Article E</article>
+                <article class="side6">Sect Article F</article>
+            </section>
+        </div>
+        <aside class="green">
+            <article class="side7"></article>
+            <article class="side8"></article>
+            <article class="side9"></article>
+            <article class="side10"></article>
+            <article class="side11"></article>
+        </aside>
+
+        <section>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+
+        <footer></footer>
+    </main>
+</body>
+</html>

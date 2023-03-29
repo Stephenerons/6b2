@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      nav ul {
+        list-style: none;
+        background-color: tomato;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 150px;
+      }
+
+      nav ul li:nth-of-type(3n + 1) {
+        align-self: flex-start;
+      }
+
+      nav ul li:nth-last-of-type(3n + 3) {
+        align-self: flex-end;
+      }
+      main {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 10px 10px;
+        height: 600px;
+        grid-template-areas:
+          "a a a b"
+          "a a a b"
+          "c c c d"
+          "c c c d"
+          "e e e e";
+      }
+
+      section,
+      div,
+      aside,
+      footer {
+        background-color: dodgerblue;
+      }
+
+      main > :nth-of-type(1) {
+        grid-area: a;
+      }
+
+      main > :nth-of-type(2) {
+        grid-area: b;
+      }
+
+      main > :nth-of-type(3) {
+        grid-area: c;
+      }
+
+      main > :nth-of-type(4) {
+        grid-area: d;
+      }
+
+      main > :nth-of-type(5) {
+        grid-area: e;
+      }
+
+      div {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 200px);
+        gap: 10px;
+      }
+
+      div section: :last-of-type {
+        display: grid ;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 200px);
+      }
+      footer {
+        grid-area: e;
+      }
+    </style>
+  </head>
+  <header>
+    <nav>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JAVASCRIPT</li>
+        <li>REACT</li>
+        <li>PYTHON</li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <main>
+      <section>we need more efficiency</section>
+      <aside>
+        <article></article>
+        <article></article>
+      </aside>
+      <div>
+        <section>
+          <article></article>
+          <artcle></artcle>
+        </section>
+        <section>
+          <article></article>
+          <article></article>
+        </section>
+      </div>
+      <aside>
+        <article>we need more brain power</article>
+        <article>we need more brain power</article>
+      </aside>
+      <footer></footer>
+    </main>
+  </body>
+</html>
