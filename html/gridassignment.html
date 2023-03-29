@@ -58,9 +58,6 @@ footer{
  .forarticle{
     grid-area: b;
  }
-/* main > :nth-child(5){
-    grid-area: b;
-} */
 
 
 main > *{
@@ -75,6 +72,13 @@ aside:first-of-type{
 
 .forarticle{
     background-color: red;
+}
+
+.sectb{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100pxg);
+    gap: 10px;
 }
 
 .green{
@@ -106,7 +110,7 @@ footer{
     <main>
         <section class="secta"></section>
         <div class="forarticle">
-            <section>
+            <section class="sectb">
                 <article class="side1">Sect Article A</article>
                 <article class="side2">Sect Article B</article>
                 <article class="side3">Sect Article C</article>
