@@ -5,125 +5,562 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Webpage</title>
-    <link rel="stylesheet" href="./html/homepagestyle.css" />
+    <style>
+      @media screen and (max-width: 480px) {
+        body {
+          background-image: url(./html/media/dragon-scales.svg);
+          background-size: contain;
+        }
+
+        main {
+          display: grid;
+          grid-template-rows: repeat(1, 150px);
+          grid-template-columns: repeat(1, 1fr);
+          background: url(./html/media/Nature\ free.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+        }
+
+        main ul {
+          display: flex;
+          justify-content: space-evenly;
+          list-style-type: none;
+        }
+
+        main li {
+          width: 20%;
+          border-radius: 2em;
+          border-style: groove;
+          border-color: #18d5a3;
+          margin-bottom: 25px;
+          padding: 1rem;
+          border-bottom: double;
+          background-color: rgb(30, 143, 255);
+          transition: background-color 3s ease-out;
+        }
+        main + section {
+          grid-area: 1;
+        }
+
+        .assignments {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 120px);
+          gap: 10px;
+          margin-top: 20px;
+          margin-bottom: -100px;
+        }
+
+        .assignments section {
+          border: 1em solid rgb(42, 104, 112);
+          border-radius: 2rem;
+          background-color: #25aeae;
+        }
+
+        .assignments section:hover {
+          background: rgb(209, 130, 46);
+          background: linear-gradient(
+            207deg,
+            rgba(209, 130, 46, 1) 13%,
+            rgba(46, 125, 209, 1) 100%
+          );
+        }
+
+        .assignments section:first-child {
+          grid-area: 1;
+          display: flex;
+          justify-content: space-around;
+          background-color: #d4d1bb2e;
+        }
+
+        .assignments section:nth-of-type(2) {
+          grid-area: 2;
+        }
+
+        .assignments section:nth-of-type(3) {
+          grid-area: 3;
+        }
+
+        .assignments section:nth-of-type(4) {
+          grid-area: 4;
+        }
+
+        .assignments section:nth-of-type(5) {
+          grid-area: 5;
+        }
+
+        .assignments section:nth-of-type(6) {
+          grid-area: 6;
+        }
+
+        .assignments section:nth-of-type(7) {
+          grid-area: 7;
+        }
+
+        .classwork {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+          grid-template-rows: repeat(3, 150px);
+          gap: 10px;
+          margin-top: 10%;
+        }
+
+        .classwork section {
+          border: 1em solid rgb(42, 104, 112);
+          border-radius: 2rem;
+          background-color: #b1aa226f;
+        }
+
+        .classwork section:hover {
+          background: rgb(209, 130, 46);
+          background: linear-gradient(
+            207deg,
+            rgba(209, 130, 46, 1) 13%,
+            rgba(46, 125, 209, 1) 100%
+          );
+        }
+
+        .classwork section:first-child {
+          grid-area: 1;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .classwork section:nth-of-type(2) {
+          grid-area: 2;
+        }
+
+        .classwork section:nth-of-type(3) {
+          grid-area: 3;
+        }
+
+        .classwork section:nth-of-type(4) {
+          grid-area: 4;
+        }
+
+        .classwork section:nth-of-type(5) {
+          grid-area: 5;
+        }
+
+        .classwork section:nth-of-type(6) {
+          grid-area: 6;
+        }
+
+        .classwork section:nth-of-type(7) {
+          grid-area: 7;
+        }
+
+        .box2 {
+          float: left;
+          margin-right: 1.5rem;
+        }
+        .box2 img {
+          border-radius: 20%;
+          width: 300px;
+        }
+
+        .name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        h2 {
+          display: flex;
+          justify-content: center;
+        }
+        .name :first-child {
+          font-size: 3rem;
+        }
+
+        .big {
+          font-size: 2rem;
+        }
+        .white {
+          color: rgba(221, 221, 221, 0.914);
+        }
+
+        .color {
+          color: #ffab82;
+        }
+
+        .metext {
+          margin-top: 2.5rem;
+          margin-bottom: 5rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .black {
+          position: absolute;
+          top: 65%;
+          width: fit-content;
+          height: fit-content;
+          background-color: rgba(24, 22, 22, 0.612);
+        }
+
+        .anchors a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          background-color: rgb(30, 143, 255);
+        }
+
+        
+      }
+
+     
+
+      @media screen and (min-width: 768px) {
+        body {
+          background-image: url(./html/media/dragon-scales.svg);
+        }
+
+        main {
+          display: grid;
+          grid-template-rows: repeat(1, 150px);
+          grid-template-columns: repeat(1, 1fr);
+          background: url(./html/media/Nature\ free.jpg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          height: 100vh;
+        }
+
+        main ul {
+          display: flex;
+          justify-content: space-evenly;
+          list-style-type: none;
+        }
+
+        main li {
+          width: 20%;
+          border-radius: 2em;
+          border-style: groove;
+          border-color: #18d5a3;
+          margin-bottom: 25px;
+          padding: 1rem;
+          border-bottom: double;
+          background-color: rgb(30, 143, 255);
+          transition: background-color 3s ease-out;
+        }
+        main + section {
+          grid-area: 1/1/2/2;
+        }
+
+        .assignments {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 120px);
+          gap: 10px;
+          margin-top: 20px;
+          margin-bottom: -100px;
+        }
+
+        .assignments section {
+          border: 1em solid rgb(42, 104, 112);
+          border-radius: 2rem;
+          background-color: #25aeae;
+        }
+
+        .assignments section:hover {
+          background: rgb(209, 130, 46);
+          background: linear-gradient(
+            207deg,
+            rgba(209, 130, 46, 1) 13%,
+            rgba(46, 125, 209, 1) 100%
+          );
+        }
+
+        .assignments section:first-child {
+          grid-area: 1/1/2/4;
+          display: flex;
+          justify-content: space-around;
+          background-color: #d4d1bb2e;
+        }
+
+        .assignments section:nth-of-type(2) {
+          grid-area: 2/1/3/2;
+        }
+
+        .assignments section:nth-of-type(3) {
+          grid-area: 2/2/3/3;
+        }
+
+        .assignments section:nth-of-type(4) {
+          grid-area: 2/3/3/4;
+        }
+
+        .assignments section:nth-of-type(5) {
+          grid-area: 3/1/4/2;
+        }
+
+        .assignments section:nth-of-type(6) {
+          grid-area: 3/2/4/3;
+        }
+
+        .assignments section:nth-of-type(7) {
+          grid-area: 3/3/4/4;
+        }
+
+        .classwork {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(3, 150px);
+          gap: 10px;
+          margin-top: 10%;
+        }
+
+        .classwork section {
+          border: 1em solid rgb(42, 104, 112);
+          border-radius: 2rem;
+          background-color: #b1aa226f;
+        }
+
+        .classwork section:hover {
+          background: rgb(209, 130, 46);
+          background: linear-gradient(
+            207deg,
+            rgba(209, 130, 46, 1) 13%,
+            rgba(46, 125, 209, 1) 100%
+          );
+        }
+
+        .classwork section:first-child {
+          grid-area: 1/1/2/4;
+          display: flex;
+          justify-content: space-around;
+        }
+
+        .classwork section:nth-of-type(2) {
+          grid-area: 2/1/3/2;
+        }
+
+        .classwork section:nth-of-type(3) {
+          grid-area: 2/2/3/3;
+        }
+
+        .classwork section:nth-of-type(4) {
+          grid-area: 2/3/3/4;
+        }
+
+        .classwork section:nth-of-type(5) {
+          grid-area: 3/1/4/2;
+        }
+
+        .classwork section:nth-of-type(6) {
+          grid-area: 3/2/4/3;
+        }
+
+        .classwork section:nth-of-type(7) {
+          grid-area: 3/3/4/4;
+        }
+
+        .box2 {
+          float: left;
+          margin-right: 1.5rem;
+        }
+        .box2 img {
+          border-radius: 20%;
+          width: 300px;
+        }
+
+        .name {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        h2 {
+          display: flex;
+          justify-content: center;
+        }
+        .name :first-child {
+          font-size: 3rem;
+        }
+
+        .big {
+          font-size: 2rem;
+        }
+        .white {
+          color: rgba(221, 221, 221, 0.914);
+        }
+
+        .color {
+          color: #ffab82;
+        }
+
+        .metext {
+          margin-top: 2.5rem;
+          margin-bottom: 5rem;
+          display: flex;
+          justify-content: center;
+        }
+
+        .black {
+          position: absolute;
+          top: 65%;
+          width: fit-content;
+          height: fit-content;
+          background-color: rgba(24, 22, 22, 0.612);
+        }
+
+        .anchors a {
+          text-decoration: none;
+        }
+
+        a:hover {
+          background-color: rgb(30, 143, 255);
+        }
+
+        .frontend{
+          width: 150ch ;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>My Webpage</h1>
     <main>
       <section>
-        <h2>Assignment</h2>
-        <aside>
-          <h3><abbr title="Hyper-Text-Markup-Language">HTML</abbr></h3>
-          <ul>
-            <li class="list">
-              <a href="./html/geopolitical_zones.html" target="_blank"
-                >geopolitical_zones</a
-              >
-            </li>
-            <li class="list">
-              <a href="./html/Body_system.html" target="_blank">Body system</a>
-            </li>
-            <li class="list">
-              <a href="./html/structuredpage.html" target="_blank"
-                >Structuring a page</a
-              >
-            </li>
-            <li class="list">
-              <a href="./html/form_assignment.html" target="_blank"
-                >Structuring a form</a
-              >
-            </li>
-            <li class="list">
-              <a href="./html/cascade.html" target="_blank"
-                >Cascading and specificity</a
-              >
-            </li>
-
-            <li>
-              <a href="./html/gridassignment.html" target="_blank"
-                >Grid assignment
-              </a>
-            </li>
-          </ul>
-        </aside>
-
-        <aside>
-          <h3><abbr title="Cascading-Style-Sheet">CSS</abbr></h3>
-          <ul>
-            <li class="list">
-              <a href="./html/webstyle.css" target="_blank">webpage styling</a>
-            </li>
-            <li class="list">
-              <a href="./html/homepagestyle.css" target="_blank"
-                >Homepage Style code</a
-              >
-            </li>
-          </ul>
-        </aside>
-      </section>
-      <section>
-        <h2>Classwork</h2>
-        <aside>
-          <h3><abbr title="Hyper-Text-Markup-Language">HTML</abbr></h3>
-          <ul>
-            <li class="list">
-              <a href="./html/letter.html" target="_blank"
-                >Structuring a letter</a
-              >
-            </li>
-            <li class="list">
-              <a href="./html/form.html" target="_blank">Structuring a form</a>
-            </li>
-            <li class="list">
-              <a href="./html/Flag.html" target="_blank">Creating flags</a>
-            </li>
-          </ul>
-        </aside>
-        <aside>
-          <h3>
-            <abbr title="Cascading-Style-Sheet" target="_blank">CSS</abbr>
-          </h3>
-          <ul>
-            <li class="list">
-              <a href="./html/style1.css" target="_blank">Flag style</a>
-            </li>
-          </ul>
-        </aside>
+        <nav>
+          <span class="white"
+            ><ul>
+              <li><a href="#asi"></a>Assignment</li>
+              <li>Classwork</li>
+              <li>About me</li>
+            </ul></span
+          >
+        </nav>
       </section>
 
-      <nav>
-        <a href="#">back to top</a>
-      </nav>
+      <section class="name">
+        <p>
+          <span class="white">Hi, My Name Is</span>
+          <span class="color"> Momoh Stephen Eromosele</span>
+        </p>
+        <p class="black white big">I'm a frontend developer</p>
+      </section>
     </main>
 
-    <!-- <section>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/tjHVdpwkH5Q"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
-    </section>
-    <section>
-      <audio loop muted controls src="./html/media/ordinarypeople.mp3">
-        ordinary_people
-      </audio>
-    </section> -->
+    <div id="asi" class="assignments anchors">
+      <section><p class="big">My Assignments</p></section>
+      <section>
+        <p>
+          An assignment given to us by Mr.Fancis , understanding the basics of
+          <abbr title="Hypertext_Markup_Language"> html</abbr>
+        </p>
+        <a href="./html/geopolitical_zones.html" target="_blank"
+          >geopolitical_zones</a
+        >
+      </section>
+      <section>
+        <p>
+          Here we look into the body system. Anonthe part of understanding basic
+          <abbr title="Hypertext_Markup_Language"> html</abbr>
+        </p>
+        <a href="./html/Body_system.html" target="_blank">Body system</a>
+      </section>
+      <section>
+        <p>
+          Advancing in <abbr title="Hypertext_Markup_Language"> html</abbr>, we
+          structure a page with the
+          <abbr title="Cascading_Style_Sheet">CSS</abbr> code assigned to us
+        </p>
+        <a href="./html/structuredpage.html" target="_blank"
+          >Structuring a page</a
+        >
+      </section>
+      <section>
+        <p>
+          Here we create our very on form for the first time. Was kind of
+          interesting though.
+        </p>
+        <a href="./html/form_assignment.html" target="_blank"
+          >Structuring a form</a
+        >
+      </section>
+      <section>
+        <p>
+          Here we learn the baics of css. "i wont lie , it gave me some though
+          time (lol)"
+        </p>
+        <a href="./html/cascade.html" target="_blank"
+          >Cascading and specificity</a
+        >
+      </section>
+      <section>
+        <p>
+          The grid assignment , hmmmmmm. Well , im glad we all passed that stage
+        </p>
+        <a href="./html/gridassignment.html" target="_blank"
+          >Grid assignment
+        </a>
+      </section>
+    </div>
 
-    <!-- <section>
-      <video
-        poster="./html/media/maui-of-moana.jpg"
-        controls
-        muted
-        loop
-        width="600"
-        src="./html/media/yourewelcome.mp4"
-      >
-        Yourewelcomebydwaynejohnson
-      </video>
-    </section> -->
+    <div class="classwork anchors">
+      <section>
+        <p class="big">Classwork</p>
+      </section>
+      <section>
+        <p>
+          Structuring a letter with
+          <abbr title="Hypertext_Markup_Language"> html</abbr>, apply the right
+          codes we learnt from our basic html
+        </p>
+        <a href="./html/letter.html" target="_blank">Structuring a letter</a>
+      </section>
+      <section>
+        <p>
+          Here we Created flags using gradients , although we learnt manually
+          but i no longer use the manual method to create gradients
+        </p>
+        <a href="./html/Flag.html" target="_blank">Creating flags</a>
+      </section>
+      <section>
+        <p>
+          Ride along with mr francis while we learn how to create forms for the
+          first time
+        </p>
+        <a href="./html/form.html" target="_blank">Structuring a form</a>
+      </section>
+      <section>
+        <p>COMING SOON</p>
+      </section>
+      <section>
+        <p>COMING SOON</p>
+      </section>
+      <section><p>COMING SOON</p></section>
+    </div>
+
+    <div class="box">
+      <section class="metext">
+        <h2 class="big">About Me</h2>
+      </section>
+
+      <div class="box2">
+        <img src="./html/media/Hello world.gif" alt="HElloworld" />
+      </div>
+      <section class="aboutme">
+        <p class="big">Hi My Name is Momoh Stephen Eromosele</p>
+        <p class="frontend">
+          I'm a front-end developer specialized in building responsive and
+          dynamic interfaces using HTML, CSS, and JavaScript. My expertise lies
+          in transforming complex designs into pixel-perfect, interactive, and
+          mobile-first websites that engage users and deliver a seamless user
+          experience.
+        </p>
+      </section>
+
+      <section class="listbox">
+        <p>Name : Momoh Stephen Eromosele</p>
+        <p>Course: Frontend</p>
+        <p>Mail: <a href="mailto:Jacksonwayne879@gmail.com">Email me</a></p>
+        <p>Contact : <a href="tel:+2349035749404">Phone number</a></p>
+      </section>
+
+      <p>My first real project</p>
+    </div>
   </body>
 </html>

@@ -4,115 +4,126 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      nav ul {
-        list-style: none;
-        background-color: tomato;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 150px;
-      }
-
-      nav ul li:nth-of-type(3n + 1) {
-        align-self: flex-start;
-      }
-
-      nav ul li:nth-last-of-type(3n + 3) {
-        align-self: flex-end;
-      }
-      main {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 10px 10px;
-        height: 600px;
-        grid-template-areas:
-          "a a a b"
-          "a a a b"
-          "c c c d"
-          "c c c d"
-          "e e e e";
-      }
-
-      section,
-      div,
-      aside,
-      footer {
-        background-color: dodgerblue;
-      }
-
-      main > :nth-of-type(1) {
-        grid-area: a;
-      }
-
-      main > :nth-of-type(2) {
-        grid-area: b;
-      }
-
-      main > :nth-of-type(3) {
-        grid-area: c;
-      }
-
-      main > :nth-of-type(4) {
-        grid-area: d;
-      }
-
-      main > :nth-of-type(5) {
-        grid-area: e;
-      }
-
-      div {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: repeat(1, 200px);
-        gap: 10px;
-      }
-
-      div section: :last-of-type {
-        display: grid ;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 200px);
-      }
-      footer {
-        grid-area: e;
-      }
-    </style>
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="./html/homepagestyle.css" />
   </head>
-  <header>
-    <nav>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JAVASCRIPT</li>
-        <li>REACT</li>
-        <li>PYTHON</li>
-      </ul>
-    </nav>
-  </header>
   <body>
+    <h1>My Webpage</h1>
     <main>
-      <section>we need more efficiency</section>
-      <aside>
-        <article></article>
-        <article></article>
-      </aside>
-      <div>
-        <section>
-          <article></article>
-          <artcle></artcle>
-        </section>
-        <section>
-          <article></article>
-          <article></article>
-        </section>
-      </div>
-      <aside>
-        <article>we need more brain power</article>
-        <article>we need more brain power</article>
-      </aside>
-      <footer></footer>
+      <section>
+        <h2>Assignment</h2>
+        <aside>
+          <h3><abbr title="Hyper-Text-Markup-Language">HTML</abbr></h3>
+          <ul>
+            <li class="list">
+              <a href="./html/geopolitical_zones.html" target="_blank"
+                >geopolitical_zones</a
+              >
+            </li>
+            <li class="list">
+              <a href="./html/Body_system.html" target="_blank">Body system</a>
+            </li>
+            <li class="list">
+              <a href="./html/structuredpage.html" target="_blank"
+                >Structuring a page</a
+              >
+            </li>
+            <li class="list">
+              <a href="./html/form_assignment.html" target="_blank"
+                >Structuring a form</a
+              >
+            </li>
+            <li class="list">
+              <a href="./html/cascade.html" target="_blank"
+                >Cascading and specificity</a
+              >
+            </li>
+
+            <li>
+              <a href="./html/gridassignment.html" target="_blank"
+                >Grid assignment
+              </a>
+            </li>
+          </ul>
+        </aside>
+
+        <aside>
+          <h3><abbr title="Cascading-Style-Sheet">CSS</abbr></h3>
+          <ul>
+            <li class="list">
+              <a href="./html/webstyle.css" target="_blank">webpage styling</a>
+            </li>
+            <li class="list">
+              <a href="./html/homepagestyle.css" target="_blank"
+                >Homepage Style code</a
+              >
+            </li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>Classwork</h2>
+        <aside>
+          <h3><abbr title="Hyper-Text-Markup-Language">HTML</abbr></h3>
+          <ul>
+            <li class="list">
+              <a href="./html/letter.html" target="_blank"
+                >Structuring a letter</a
+              >
+            </li>
+            <li class="list">
+              <a href="./html/form.html" target="_blank">Structuring a form</a>
+            </li>
+            <li class="list">
+              <a href="./html/Flag.html" target="_blank">Creating flags</a>
+            </li>
+          </ul>
+        </aside>
+        <aside>
+          <h3>
+            <abbr title="Cascading-Style-Sheet" target="_blank">CSS</abbr>
+          </h3>
+          <ul>
+            <li class="list">
+              <a href="./html/style1.css" target="_blank">Flag style</a>
+            </li>
+          </ul>
+        </aside>
+      </section>
+
+      <nav>
+        <a href="#">back to top</a>
+      </nav>
     </main>
+
+    <!-- <section>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/tjHVdpwkH5Q"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </section>
+    <section>
+      <audio loop muted controls src="./html/media/ordinarypeople.mp3">
+        ordinary_people
+      </audio>
+    </section> -->
+
+    <!-- <section>
+      <video
+        poster="./html/media/maui-of-moana.jpg"
+        controls
+        muted
+        loop
+        width="600"
+        src="./html/media/yourewelcome.mp4"
+      >
+        Yourewelcomebydwaynejohnson
+      </video>
+    </section> -->
   </body>
 </html>
